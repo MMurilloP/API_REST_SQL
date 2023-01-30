@@ -8,14 +8,13 @@ const authorsApiRoutes = require('./routes/authApiRoutes');
 const app = express();
 const port = 3000;
 
-
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined'));
 
 app.get('/', (req, res) => {
-    res.send('The Journal API');
+    res.send('SQL API REST');
 })
 
 app.use('/api/entries', entriesApiRoutes); 
